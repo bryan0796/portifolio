@@ -1,0 +1,140 @@
+#apresentacao{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 112px;
+  height: auto;
+  background: linear-gradient(to right, #e0e0e0 50%, #121212 50%);
+}
+
+.fragmentoAbrir {
+  margin: 20px 0 20px 40px;
+}
+
+.titulo {
+  grid-column: 1/3;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+.tituloPart1 {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.tituloPart2 {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.const, .bryan, .igual, .new, .developer, .parenteses {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+.const, .igual {
+  color: #121212;
+}
+
+.bryan {
+  color: #004AA1;
+}
+
+.new, .parenteses {
+  color: #fff;
+}
+
+.developer {
+  color: #A11C10;
+}
+
+.chaveAbrir {
+  margin-top: 8px;
+  margin-left: 140px;
+  grid-column: 1;
+}
+
+.perfil {
+  opacity: 0;
+  grid-column: 1;
+  justify-self: end;
+  margin-top: 12px;
+  margin-right: 80px;
+  width: 50%;
+}
+
+.texto {
+  opacity: 0;
+  color: #e6e6e6;
+  font-size: 2.5rem;
+  width: 16ch;
+  place-self: center;
+}
+
+.chaveFechar {
+  grid-column: 2;
+  justify-self: end;
+  margin-top: 52px;
+  margin-right: 64px;
+}
+
+.fragmentoFechar {
+  grid-column: 2;
+  justify-self: end;
+  margin: 28px 20px 20px 0;
+}
+
+@media(max-width: 800px) {
+  #apresentacao{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 112px;
+    height: auto;
+    background: linear-gradient(to bottom, #e0e0e0 50%, #121212 50%);
+  }
+  .chaveAbrir {
+    margin-top: 8px;
+    margin-left: 100px;
+    grid-column: 1;
+  }
+  .const, .bryan, .igual, .new, .developer, .parenteses {
+    font-size: 1.75rem;
+    padding: 0.25rem;
+  }
+  .new, .parenteses {
+    color: #121212;
+  }
+  .perfil {
+    margin: 0 auto;
+  }
+  .texto {
+    grid-row: 5;
+    font-size: 2.5rem;
+    margin-top: 40px;
+  }
+  .chaveFechar {
+    grid-column: 1;
+  }
+  .fragmentoFechar {
+    grid-column: 1;
+  }
+}
+
+@media(max-width: 400px) {
+  .fragmentoAbrir {
+    margin: 20px 0 8px 8px;
+  }
+  .const, .bryan, .igual, .new, .developer, .parenteses {
+    font-size: 1.25rem;
+    padding: 0.25rem;
+  }
+  .chaveAbrir {
+    margin-left: 60px;
+  }
+  .texto { 
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+}

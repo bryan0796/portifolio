@@ -1,0 +1,40 @@
+.header {
+  background-color: #E0E0E0;
+  height: 112px;
+  width: 100%;
+  position: fixed;
+  display: block;
+  z-index: 999;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;  
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #121212;
+}
+
+.nav {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center; 
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.itensMenu {
+  display: flex;
+  gap: 20px;
+}
+.itensMenu a {
+  padding: 12px 16px;
+  color: #121212;
+  font-size: 1.25rem;
+}

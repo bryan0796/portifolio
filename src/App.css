@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 2000px;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  z-index: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, h1, h2 {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.slowEnter {
+  opacity: 0;
+  transform: scale(0);
+  animation: slowEnter 0.8s forwards;
+}
+
+@keyframes slowEnter {
+  to {
+    opacity: initial;
+    transform: scale(1);
+  }
+}
