@@ -1,0 +1,84 @@
+#sobre {
+  margin: 0;
+  background: linear-gradient(to right, #e0e0e0 50%, #121212 50%);
+}
+
+.titulo {
+  font-size: 2.5rem;
+  padding: 40px 0 40px 60px;
+  color: #121212;
+}
+.titulo :nth-child(1){
+  color: var(--azul);
+}
+.titulo :nth-child(3){
+  color: var(--vermelho);
+}
+
+.dados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 1.25rem;
+  padding: 16px;
+}
+.dados p:nth-child(odd) {
+  justify-self: end;
+  color: #303030;
+}
+.dados p:nth-child(even) {
+  justify-self: start;
+  color: #bdbdbd;
+  max-width: 32ch;
+}
+
+.informacoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.objetivos .titulo {
+  font-size: 2rem;
+}
+.objetivos p {
+  max-width: 28ch;
+  font-size: 1.25rem;
+  padding-left: 80px;
+  color: #303030;
+}
+
+.cursos .titulo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.cursosLista span, ul {
+  color: #bdbdbd;
+}
+.cursosLista ul {
+  max-width: 100%;
+  padding-left: 100px;
+}
+.cursosLista span:first-child{
+  padding-left: 80px;
+}
+.cursosLista span:last-child {
+  padding-left: 260px;
+}
+
+.github {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 20px;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.github h3 {
+  color: #121212;
+  justify-self: end;
+}
+.github a {
+  color: #fff;
+}
+

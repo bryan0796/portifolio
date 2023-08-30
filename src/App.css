@@ -5,6 +5,9 @@
 
 body {
   height: 2000px;
+  --azul: #004AA1;
+  --vermelho: #A11C10;
+  --backgroundCinza: #e6e6e6;
 }
 
 img {
@@ -22,8 +25,34 @@ a {
   text-decoration: none;
 }
 
-a, h1, h2 {
+a, h1, h2, h3 {
   font-family: 'Fira Sans', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.fragmentoAbrir {
+  padding-top: 20px;
+  margin: 0px 0 20px 40px;
+}
+
+.fragmentoFechar {
+  grid-column: 2;
+  justify-self: end;
+  margin: 28px 20px 20px 0;
+}
+
+@media(max-width: 800px) {
+  .fragmentoFechar {
+    grid-column: 1;
+  }
+}
+@media(max-width: 500px) {
+  .fragmentoAbrir {
+    margin: 20px 0 8px 8px;
+  }
 }
 
 .slowEnter {

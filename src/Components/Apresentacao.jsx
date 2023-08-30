@@ -91,17 +91,17 @@ const Apresentacao = () => {
 
   return (
     <div id={styles.apresentacao}>
-      <div className={styles.fragmentoAbrir}>
+      <div className='fragmentoAbrir'>
         <ImgFragmentoAbrir />
       </div>
       <div className={styles.titulo} >
         <h1 className={styles.tituloPart1}>
           <span ref={titulo1Const} className={styles.const}>
             const
-          </span>{' '}
+          </span>
           <span ref={titulo1Bryan} className={styles.bryan}>
             Bryan
-          </span>{' '}
+          </span>
           <span ref={titulo1Igual} className={styles.igual}>
             =
           </span>
@@ -130,7 +130,7 @@ const Apresentacao = () => {
       <div className={styles.chaveFechar}>
         <ImgChaveFechar />
       </div>
-      <div className={styles.fragmentoFechar}>
+      <div className= 'fragmentoFechar'>
         <ImgFragmentoFechar />
       </div>
     </div>
