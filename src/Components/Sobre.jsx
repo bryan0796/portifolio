@@ -29,7 +29,7 @@ const Sobre = () => {
         </div>
         <div className={styles.informacoes}>
           <div className={styles.objetivos}>
-            <h2 className={styles.titulo}>
+            <h2 className={styles.subtitulo}>
               <span>console</span>
               <span>.</span>
               <span>log</span>
@@ -42,17 +42,17 @@ const Sobre = () => {
             </p>
           </div>
           <div className={styles.cursos}>
-            <h2 className={styles.titulo}>console.log(cursos)</h2>
+            <h2 className={styles.subtitulo}>console.log(cursos)</h2>
             <div className={styles.cursosLista}>
               <span>[</span>
               <ul>
-                <li>"Lógica e Algoritmos"</li>
-                <li>"UI Design"</li>
-                <li>"HTML e CSS"</li>
-                <li>"JavaScript"</li>
-                <li>"Jquery"</li>
-                <li>"React"</li>
-                <li>"Banco de Dados"</li>
+                <li>"Lógica e Algoritmos",</li>
+                <li>"UI Design",</li>
+                <li>"HTML e CSS",</li>
+                <li>"JavaScript",</li>
+                <li>"Jquery",</li>
+                <li>"React",</li>
+                <li>"Banco de Dados",</li>
                 <li>"PHP"</li>
               </ul>
               <span>]</span>
