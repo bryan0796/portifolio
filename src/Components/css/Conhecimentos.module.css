@@ -15,7 +15,7 @@
   color: var(--vermelho);
 }
 
-.spanUl span {
+.tagUl {
   display: inline-block;
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.5rem;

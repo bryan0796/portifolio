@@ -12,27 +12,34 @@ import { ReactComponent as Php } from '../assets/icons/php.svg';
 const Conhecimentos = () => {
   const [mudarCores, setMudarCores] = React.useState(false);
 
-  const [corSvg, setCorSvg] = React.useState('#121212');
-  const [corUl, setCorUl] = React.useState('#121212');
-  const [corBackground, setCorBackground] = React.useState('#000');
+  const defaultColors = {
+    svg: '#121212',
+    ul: '#121212',
+    background: '#000',
+  };
+
+  const [colors, setColors] = React.useState(defaultColors);
   const [textBotao, setTextBotao] = React.useState('mostrar');
   const [textDisplay, setTextDisplay] = React.useState('none');
 
   const backgroundElement = React.useRef();
   const ulElement = React.useRef();
-  const botaoElement = React.useRef();
 
   React.useEffect(() => {
     if (mudarCores === true) {
-      setCorSvg('#004AA1');
-      setCorUl('#A11C10');
-      setCorBackground('#E0E0E0');
+      setColors({
+        svg: '#004AA1',
+        ul: '#A11C10',
+        background: '#E0E0E0',
+      });
       setTextBotao('esconder');
       setTextDisplay('block');
     } else if (mudarCores === false) {
-      setCorSvg('#121212');
-      setCorUl('#121212');
-      setCorBackground('#000');
+      setColors({
+        svg: '#121212',
+        ul: '#121212',
+        background: '#000',
+      });
       setTextBotao('mostrar');
       setTextDisplay('none');
     }
@@ -40,15 +47,12 @@ const Conhecimentos = () => {
 
   React.useEffect(() => {
     if (ulElement.current) {
-      ulElement.current.style.color = corUl;
-    }
+      ulElement.current.style.color = colors.ul;    }
     if (backgroundElement.current) {
-      backgroundElement.current.style.background = corBackground;
+      backgroundElement.current.style.background = colors.background;
     }
-    if (botaoElement.current) {
-      botaoElement.current.innerText = textBotao;
-    }
-  }, [corUl, corBackground, textBotao]);
+  }, [colors]);
+
 
   function handleClick(e) {
     e.preventDefault();
@@ -63,56 +67,58 @@ const Conhecimentos = () => {
         <span>conhecimentos</span>
         <span>()</span>
       </h1>
-      <div className={style.spanUl}>
-        <span>&lt;ul style="display: {textDisplay};"&gt;</span>
+      <div className={style.tagUl}>
+        {'<ul style="display:' + textDisplay + ';">'}
       </div>
       <div ref={backgroundElement} className={style.tecnologiasBg}>
         <ul ref={ulElement} className={style.tecnologias}>
           <div>
             <li>
-              <Figma stroke={corSvg} />
+              <Figma stroke={colors.svg} />
               Figma
             </li>
             <li>
-              <Html fill={corSvg} />
+              <Html fill={colors.svg} />
               HTML
             </li>
             <li>
-              <Css fill={corSvg} />
+              <Css fill={colors.svg} />
               CSS
             </li>
             <li>
-              <Javascript fill={corSvg} />
+              <Javascript fill={colors.svg} />
               JavaScript
             </li>
           </div>
           <div>
             <li>
-              <Jquery fill={corSvg} />
+              <Jquery fill={colors.svg} />
               Jquery
             </li>
             <li>
-              <ReactSVG fill={corSvg} />
+              <ReactSVG fill={colors.svg} />
               React
             </li>
             <li>
-              <Sql fill={corSvg} />
+              <Sql fill={colors.svg} />
               SQL
             </li>
             <li>
-              <Php fill={corSvg} />
+              <Php fill={colors.svg} />
               PHP
             </li>
           </div>
         </ul>
       </div>
-      <div className={style.spanUl}>
-        <span>&lt;/ul&gt;</span>
+      <div className={style.tagUl}>
+        {'</ul>'}
       </div>
       <div className={style.divBotao}>
         <span>&lt;button&gt;</span>
-        <button ref={botaoElement} onClick={handleClick} className={style.botaoMostrar}>
-        </button>
+        <button
+          onClick={handleClick}
+          className={style.botaoMostrar}
+        >{textBotao}</button>
         <span>&lt;/button&gt;</span>
       </div>
     </div>
