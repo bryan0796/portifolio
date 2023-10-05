@@ -33,6 +33,18 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
+
+@media(max-width: 800px) {
+  .titulo {
+    font-size: 2rem;
+  }
+}
+@media(max-width: 500px) {
+  .titulo {
+    font-size: 1.5rem;
+  }
+}
+
 .fragmentoAbrir {
   padding: 20px 0 20px 40px;
 }
