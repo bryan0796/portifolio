@@ -9,14 +9,14 @@ import { ReactComponent as ReactSVG } from '../assets/icons/react.svg';
 import { ReactComponent as Sql } from '../assets/icons/sql.svg';
 import { ReactComponent as Php } from '../assets/icons/php.svg';
 
+const defaultColors = {
+  svg: '#121212',
+  ul: '#121212',
+  background: '#000',
+};
+
 const Conhecimentos = () => {
   const [mudarCores, setMudarCores] = React.useState(false);
-
-  const defaultColors = {
-    svg: '#121212',
-    ul: '#121212',
-    background: '#000',
-  };
 
   const [colors, setColors] = React.useState(defaultColors);
   const [textBotao, setTextBotao] = React.useState('mostrar');

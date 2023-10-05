@@ -54,7 +54,7 @@
   font-size: 1.75rem;
   color: #fff;
   font-family: 'Fira sans', sans-serif;
-  padding: 8px;
+  padding: 0px 20px;
 }
 
 .botaoMostrar {
@@ -73,4 +73,51 @@
   cursor: pointer;
   box-shadow: 0 0 3px 2px #4f80fb;
   transform: scale(1.011);
+}
+
+@media(max-width: 800px) {
+  .botaoMostrar {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
+}
+@media(max-width: 600px) {
+  .tagUl {
+    font-size: 1.2rem;
+    margin-left: 48px;  
+  }
+  .tecnologiasBg {
+    max-width: 60%;
+    padding: 20px 40px;
+    margin: 20px auto;
+  }
+  .tecnologias {
+    font-size: 1.5rem;
+  }
+  .tecnologias li {
+    gap: 6px;
+  }
+  .divBotao {
+    margin-top: 36px;
+  }
+  .divBotao span {
+    font-size: 1.5rem;
+  }
+  .botaoMostrar {
+    padding: 12px 24px;
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 500px) {
+  .tagUl {
+    font-size: 1rem;
+    margin-left: 36px;  
+  }
+  .divBotao span {
+    font-size: 1.2rem;
+  }
+  .botaoMostrar {
+    padding: 8px 16px;
+    font-size: 1.2rem;
+  }
 }
